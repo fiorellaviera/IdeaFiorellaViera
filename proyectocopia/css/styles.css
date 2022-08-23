@@ -24,7 +24,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: rgb(169, 223, 181);
+    background: #a9dfb5;
 }
 
 .containerHeaderFooter {
@@ -73,7 +73,7 @@ nav ul li a:hover {
 .imgPortada {
     height: 90%;
     width: 100%;
-    background-color: rgb(47, 107, 61);
+    background-color: #2f6b3d;
 
 }
 
@@ -147,12 +147,61 @@ Body {
 
     text-align: center;
     justify-content: center;
-    background-color: rgb(169, 223, 181);
     align-items: center;
     margin-top: 20px;
 
 
 }
+
+/*Animaciones, transiciones, etc En Index*/
+
+.inspiracionAnimacion {
+
+    background: linear-gradient(0deg, rgba(47, 107, 61, 1) 17%, rgba(169, 223, 181, 1) 100%);
+}
+
+.imgAnimacion {
+    margin-top: 20px;
+    transform: perspective(1500px) rotateY(15deg);
+}
+
+.imgAnimacion:hover {
+    transform: perspective(3000px) rotateY(5deg);
+}
+
+.imgAnimacionP {
+    animation: mi_animacion 10s ease-in-out 4s infinite;
+    animation-name: mi_animacion;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-iteration-count: initial;
+    animation-timing-function: initial;
+}
+@keyframes mi_animacion {
+    0% {
+        width: 20%;
+
+    }
+    25%{
+        width: 25%;
+
+    }
+    50% {
+        width: 30%;
+
+    }
+    75% {
+        width: 35%;
+
+    }
+    100% {
+        width: 40%;
+
+    }
+
+  
+}
+
 
 /*GRID EN SOBRE MI*/
 
@@ -341,100 +390,23 @@ Body {
 
 
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
     Body {
         font-size: 1.5rem;
         font-family: montserrat, sans-serif;
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     Body {
         font-size: 1.5rem;
         font-family: montserrat, sans-serif;
     }
-    
+
 
 }
 
 /*
-Body {
-    font-size: 1.5rem;
-    font-family: montserrat, sans-serif;
-}
-
-.titulo {
-    font-family: courgette;
-    margin-bottom: 10px;
-    color: rgb(198, 63, 119);
-}
-
-.titulo2 {
-    font-family: courgette;
-    margin-bottom: 10px;
-    color: rgb(82, 146, 153);
-}
-
-.presentacion {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.imgPortada {
-    height: 80%;
-    width: 100%;
-    background-color: rgb(47, 107, 61);
-    margin-bottom: 60px;
-}
-
-.textoInspiracion {
-    color: rgb(82, 146, 153);
-    margin-bottom: 20px;
-}
-
-.inspiracion {
-    text-align: center;
-    margin-top: 40px;
-    background-color: rgb(169, 223, 181);
-}
-
-
-.sobreMi {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#videoYT {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: rgb(169, 223, 181);
-    display: flex;
-
-}
-
-.imgGaleria {
-   text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.botones {
-    border-radius: 12px;
-    border-style: unset;
-    font-size: 1.5rem;
-    font-family: courgette;
-    color: rgb(47, 107, 61);
-    background-color: rgb(108, 196, 205);
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
 
 #formulario {
     color: rgb(47, 107, 61);
