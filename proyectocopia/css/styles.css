@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+
+/*Colores RGB header y footer verde:47 107 61, puntos botones o texto celeste: 108 196 205 fucsia 198 63 119*/
+
+nav ul li {
+    font-size: large;
+    list-style: none;
+    display: inline-block;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgb(169, 223, 181);
+}
+
+.containerHeaderFooter {
+    background-color: rgb(47, 107, 61);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    margin-left: 5px;
+    text-decoration: none;
+    font-family: courgette;
+    color: rgb(108, 196, 205);
+    font-size: larger;
+}
+
+.imgTamaño {
+    width: 70%;
+}
+
+.imgTamañoServicio {
+    width: 100%;
+
+}
+
+.imgTamañoIndex {
+    width: 50%;
+
+}
+
+.imgTamañoSM {
+    width: 30%;
+    height: 60%;
+
+}
+
+.imgPortada {
+    height: 90%;
+    width: 100%;
+    background-color: rgb(47, 107, 61);
+
+}
+
+.imgInspiracion {
+
+    width: 30%;
+}
+
+Body {
+    font-size: 1.5rem;
+    font-family: montserrat, sans-serif;
+}
+
+.titulo {
+    font-family: courgette;
+    color: rgb(198, 63, 119);
+}
+
+.titulo2 {
+    font-family: courgette;
+    margin-bottom: 10px;
+    color: rgb(82, 146, 153);
+}
+
+.botones {
+    border-radius: 10px;
+    border-style: unset;
+    font-size: 1.5rem;
+    font-family: courgette;
+    color: rgb(47, 107, 61);
+    background-color: rgb(108, 196, 205);
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+.botones:hover {
+    background-color: rgb(82, 146, 153);
+}
+
+/*GRID EN INDEX*/
+
+.mainGridIndex {
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 100vh 100vh 100vh;
+    grid-template-areas: "portada"
+        "presentacion"
+        "inspiracion"
+    ;
+
+}
+
+.portadaIndex {
+    grid-area: portada;
+
+}
+
+.presentacion {
+    grid-area: presentacion;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+
+.inspiracion {
+    grid-area: inspiracion;
+
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(169, 223, 181);
+    align-items: center;
+    margin-top: 20px;
+
+
+}
+
+/*GRID EN SOBRE MI*/
+
+.mainGridSobreMi {
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 100vh 100vh;
+    grid-template-areas: "sobreMi"
+        "inspiracionSM"
+    ;
+
+}
+
+.sobreMi {
+    grid-area: sobreMi;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+.inspiracionSM {
+    grid-area: inspiracionSM;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(169, 223, 181);
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/*GRID EN GALERIA*/
+
+.mainGridGaleria {
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 1000px;
+    grid-template-areas: "imgGaleria"
+    ;
+
+}
+
+.imgGaleria {
+    grid-area: imgGaleria;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 100px;
+
+}
+
+.imgGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2 img3"
+        "img4 img5 img6"
+        "img7 img8 img9";
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.img3 {
+    grid-area: img3;
+}
+
+.img4 {
+    grid-area: img4;
+}
+
+.img5 {
+    grid-area: img5;
+}
+
+.img6 {
+    grid-area: img6;
+}
+
+.img7 {
+    grid-area: img7;
+}
+
+.img8 {
+    grid-area: img8;
+}
+
+.img9 {
+    grid-area: img9;
+}
+
+
+/*GRID EN SERVICIOS*/
+
+.mainGridServicios {
+
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 1000px;
+    grid-template-areas: "servicios"
+    ;
+}
+
+.servicios {
+    grid-area: servicios;
+
+
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100vh 1fr 100px;
+    grid-template-areas: "titulo titulo titulo"
+        "ilustracionInfantil retratoDigital branding"
+        "textoIlustracion textoRetrato textoBranding"
+        "botonIlustracion botonRetrato botonBranding"
+    ;
+}
+
+.titulo {
+    grid-area: titulo;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.ilustracionInfantil {
+    grid-area: ilustracionInfantil;
+    justify-self: center;
+    align-items: center;
+}
+
+.textoIlustracion {
+    grid-area: textoIlustracion;
+    text-align: center;
+
+}
+
+.botonIlustracion {
+    grid-area: botonIlustracion;
+    align-items: center;
+
+}
+
+.retratoDigital {
+    grid-area: retratoDigital;
+    justify-self: center;
+    align-items: center;
+}
+
+.textoRetrato {
+    grid-area: textoRetrato;
+    text-align: center;
+}
+
+.botonRetrato {
+    grid-area: botonRetrato;
+    align-items: center;
+}
+
+.branding {
+    grid-area: branding;
+    justify-self: center;
+    align-items: center;
+}
+
+.textoBranding {
+    grid-area: textoBranding;
+    text-align: center;
+}
+
+.botonBranding {
+    grid-area: botonBranding;
+}
+
+
+/*GRID EN CONTACTO*/
+
+
+
+@media only screen and (max-width: 1024px){
+    Body {
+        font-size: 1.5rem;
+        font-family: montserrat, sans-serif;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    Body {
+        font-size: 1.5rem;
+        font-family: montserrat, sans-serif;
+    }
+    
+
+}
+
+/*
+Body {
+    font-size: 1.5rem;
+    font-family: montserrat, sans-serif;
+}
+
+.titulo {
+    font-family: courgette;
+    margin-bottom: 10px;
+    color: rgb(198, 63, 119);
+}
+
+.titulo2 {
+    font-family: courgette;
+    margin-bottom: 10px;
+    color: rgb(82, 146, 153);
+}
+
+.presentacion {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgPortada {
+    height: 80%;
+    width: 100%;
+    background-color: rgb(47, 107, 61);
+    margin-bottom: 60px;
+}
+
+.textoInspiracion {
+    color: rgb(82, 146, 153);
+    margin-bottom: 20px;
+}
+
+.inspiracion {
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgb(169, 223, 181);
+}
+
+
+.sobreMi {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#videoYT {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(169, 223, 181);
+    display: flex;
+
+}
+
+.imgGaleria {
+   text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.botones {
+    border-radius: 12px;
+    border-style: unset;
+    font-size: 1.5rem;
+    font-family: courgette;
+    color: rgb(47, 107, 61);
+    background-color: rgb(108, 196, 205);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#formulario {
+    color: rgb(47, 107, 61);
+}
+
+#formularioContacto {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgb(169, 223, 181);
+
+}
+
+#servicios {
+    text-align: center;
+}
+
+.imgTamaño {
+    width: 30%;
+    height: 30%;
+}
+
+#formulario {
+    height: 100vh;
+    display: grid;
+}
+*/
